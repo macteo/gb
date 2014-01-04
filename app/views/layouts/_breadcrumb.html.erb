@@ -3,7 +3,7 @@
 	  <li><%= link_to @club.name, club_path(@club) %></li>
 	  <% if @venue %>
 		  <li><%= link_to @venue.name , club_venue_path(@club, @venue) %></li>
-		  <% if !@news.is_a?(ActiveRecord::Relation) %>
+		  <% if @news && !@news.is_a?(ActiveRecord::Relation) %>
 			  <li><%= link_to @news.title , club_venue_news_path(@club, @venue, @news) %></li>
 		  <% end %>
 	  <% end %>
