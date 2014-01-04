@@ -4,6 +4,15 @@
 <% else %>
   <li><%= link_to 'Sign up', new_user_registration_path %></li>
 <% end %>
+
+<li><%= link_to 'Clubs', clubs_path %></li>
+<% if @club %>
+	<li><%= link_to 'Venues', club_venues_path(@club) %></li>
+	<% if @venue %>
+		<li><%= link_to 'News', club_venue_news_index_url(@club, @venue) %></li>
+	<% end %>
+<% end %>
+
 <% if user_signed_in? %>
   <% if current_user.has_role? :admin %>
     <li><%= link_to 'Admin', users_path %></li>

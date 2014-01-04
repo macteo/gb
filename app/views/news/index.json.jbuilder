@@ -1,6 +1,6 @@
 json.array!(@news) do |news|
-  json.extract! news, :id, :title, :subtitle, :venue_id, :finish, :show, :start
-
+  json.extract! news, :id, :title, :subtitle, :venue_id, :show, :finish, :start
+  
   if @venue
 	json.url club_venue_news_url(@club, @venue, news, format: :json)
   else

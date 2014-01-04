@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140104105656) do
+ActiveRecord::Schema.define(version: 20140104210628) do
 
   create_table "clubs", force: true do |t|
     t.text     "address"
@@ -48,11 +48,11 @@ ActiveRecord::Schema.define(version: 20140104105656) do
     t.string   "title"
     t.string   "subtitle"
     t.string   "venue_id"
-    t.date     "finish"
-    t.date     "show"
-    t.date     "start"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.datetime "start"
+    t.datetime "finish"
+    t.datetime "show"
   end
 
   create_table "roles", force: true do |t|
@@ -70,11 +70,11 @@ ActiveRecord::Schema.define(version: 20140104105656) do
     t.string   "title"
     t.string   "subtitle"
     t.string   "image_id"
-    t.date     "finish"
-    t.date     "start"
     t.string   "website"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.datetime "start"
+    t.datetime "finish"
   end
 
   create_table "users", force: true do |t|
