@@ -1,0 +1,1 @@
+json.extract! @venue, :id, :address, :category, :closed, :contacts, :desc, :email, :instructions, :latitude, :longitude, :name, :note, :path, :telephone, :website, :image_id, :club_id, :created_at, :updated_at

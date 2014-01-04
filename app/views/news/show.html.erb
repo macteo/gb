@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @news.title %>
+</p>
+
+<p>
+  <strong>Subtitle:</strong>
+  <%= @news.subtitle %>
+</p>
+
+<p>
+  <strong>Venue:</strong>
+  <%= @news.venue_id %>
+</p>
+
+<p>
+  <strong>Finish:</strong>
+  <%= @news.finish %>
+</p>
+
+<p>
+  <strong>Show:</strong>
+  <%= @news.show %>
+</p>
+
+<p>
+  <strong>Start:</strong>
+  <%= @news.start %>
+</p>
+
+<%= link_to 'Edit', edit_news_path(@news) %> |
+<%= link_to 'Back', news_index_path %>

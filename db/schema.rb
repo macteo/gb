@@ -11,7 +11,49 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140103124718) do
+ActiveRecord::Schema.define(version: 20140104105656) do
+
+  create_table "clubs", force: true do |t|
+    t.text     "address"
+    t.string   "closed"
+    t.string   "contacts"
+    t.string   "email"
+    t.string   "fax"
+    t.text     "instructions"
+    t.float    "latitude"
+    t.float    "longitude"
+    t.string   "name"
+    t.text     "note"
+    t.text     "path"
+    t.string   "position"
+    t.string   "season"
+    t.string   "telephone"
+    t.string   "website"
+    t.integer  "image_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "images", force: true do |t|
+    t.string   "name"
+    t.string   "extension"
+    t.string   "bundle"
+    t.string   "path"
+    t.string   "remote"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "news", force: true do |t|
+    t.string   "title"
+    t.string   "subtitle"
+    t.string   "venue_id"
+    t.date     "finish"
+    t.date     "show"
+    t.date     "start"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "roles", force: true do |t|
     t.string   "name"
@@ -23,6 +65,17 @@ ActiveRecord::Schema.define(version: 20140103124718) do
 
   add_index "roles", ["name", "resource_type", "resource_id"], name: "index_roles_on_name_and_resource_type_and_resource_id", using: :btree
   add_index "roles", ["name"], name: "index_roles_on_name", using: :btree
+
+  create_table "sponsors", force: true do |t|
+    t.string   "title"
+    t.string   "subtitle"
+    t.string   "image_id"
+    t.date     "finish"
+    t.date     "start"
+    t.string   "website"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false
@@ -62,5 +115,26 @@ ActiveRecord::Schema.define(version: 20140103124718) do
   end
 
   add_index "users_roles", ["user_id", "role_id"], name: "index_users_roles_on_user_id_and_role_id", using: :btree
+
+  create_table "venues", force: true do |t|
+    t.text     "address"
+    t.integer  "category"
+    t.string   "closed"
+    t.text     "contacts"
+    t.text     "desc"
+    t.string   "email"
+    t.text     "instructions"
+    t.float    "latitude"
+    t.float    "longitude"
+    t.string   "name"
+    t.text     "note"
+    t.text     "path"
+    t.string   "telephone"
+    t.string   "website"
+    t.integer  "image_id"
+    t.string   "club_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
 end

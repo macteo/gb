@@ -1,19 +1,13 @@
-Golfbox Backend
-========================
+# Golfbox Backend
 
-This application was generated with the rails_apps_composer gem:
-https://github.com/RailsApps/rails_apps_composer
-provided by the RailsApps Project:
-http://railsapps.github.io/
+## Generators
 
-________________________
+rails g scaffold Club address:text closed:string contacts:string email:string fax:string instructions:text latitude:double longitude:double name:string note:text path:text position:string season:string telephone:string website:string image_id:integer
 
-Recipes:
-["apps4", "controllers", "core", "email", "extras", "frontend", "gems", "git", "init", "models", "prelaunch", "railsapps", "readme", "routes", "saas", "setup", "testing", "views"]
+rails g scaffold Venue address:text category:integer closed:string contacts:text desc:text email:string instructions:text latitude:double longitude:double name:string note:text path:text telephone:string website:string image_id:integer club_id:string
 
-Preferences:
-{:git=>true, :apps4=>"none", :dev_webserver=>"thin", :prod_webserver=>"unicorn", :database=>"mysql", :templates=>"erb", :unit_test=>"rspec", :integration=>"rspec-capybara", :continuous_testing=>"guard", :fixtures=>"factory_girl", :frontend=>"bootstrap3", :email=>"gmail", :authentication=>"devise", :devise_modules=>"invitable", :authorization=>"cancan", :form_builder=>"none", :starter_app=>"admin_app", :rvmrc=>false, :quiet_assets=>true, :local_env_file=>true, :better_errors=>true, :ban_spiders=>true}
+rails g scaffold News title:string subtitle:string venue_id:string finish:date show:date start:date
 
-________________________
+rails g scaffold Sponsor title:string subtitle:string image_id:string finish:date start:date website:string
 
-License
+rails g scaffold Image name:string extension:string bundle:string path:string remote:string

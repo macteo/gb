@@ -1,0 +1,37 @@
+<h1>Listing sponsors</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Subtitle</th>
+      <th>Image</th>
+      <th>Finish</th>
+      <th>Start</th>
+      <th>Website</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @sponsors.each do |sponsor| %>
+      <tr>
+        <td><%= sponsor.title %></td>
+        <td><%= sponsor.subtitle %></td>
+        <td><%= sponsor.image_id %></td>
+        <td><%= sponsor.finish %></td>
+        <td><%= sponsor.start %></td>
+        <td><%= sponsor.website %></td>
+        <td><%= link_to 'Show', sponsor %></td>
+        <td><%= link_to 'Edit', edit_sponsor_path(sponsor) %></td>
+        <td><%= link_to 'Destroy', sponsor, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Sponsor', new_sponsor_path %>

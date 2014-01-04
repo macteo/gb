@@ -1,0 +1,84 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @venue.address %>
+</p>
+
+<p>
+  <strong>Category:</strong>
+  <%= @venue.category %>
+</p>
+
+<p>
+  <strong>Closed:</strong>
+  <%= @venue.closed %>
+</p>
+
+<p>
+  <strong>Contacts:</strong>
+  <%= @venue.contacts %>
+</p>
+
+<p>
+  <strong>Desc:</strong>
+  <%= @venue.desc %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @venue.email %>
+</p>
+
+<p>
+  <strong>Instructions:</strong>
+  <%= @venue.instructions %>
+</p>
+
+<p>
+  <strong>Latitude:</strong>
+  <%= @venue.latitude %>
+</p>
+
+<p>
+  <strong>Longitude:</strong>
+  <%= @venue.longitude %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @venue.name %>
+</p>
+
+<p>
+  <strong>Note:</strong>
+  <%= @venue.note %>
+</p>
+
+<p>
+  <strong>Path:</strong>
+  <%= @venue.path %>
+</p>
+
+<p>
+  <strong>Telephone:</strong>
+  <%= @venue.telephone %>
+</p>
+
+<p>
+  <strong>Website:</strong>
+  <%= @venue.website %>
+</p>
+
+<p>
+  <strong>Image:</strong>
+  <%= @venue.image_id %>
+</p>
+
+<p>
+  <strong>Club:</strong>
+  <%= @venue.club_id %>
+</p>
+
+<%= link_to 'Edit', edit_club_venue_path(@club, @venue) %> |
+<%= link_to 'Back', club_venues_path(@club) %>
