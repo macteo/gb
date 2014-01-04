@@ -1,20 +1,20 @@
-<%# add navigation links to this file %>
-<% if user_signed_in? %>
-  <li><%= link_to 'Edit account', edit_user_registration_path %></li>
-<% else %>
-  <li><%= link_to 'Sign up', new_user_registration_path %></li>
-<% end %>
-
 <li><%= link_to 'Clubs', clubs_path %></li>
-<% if @club %>
+<% if @club && !@club.id.blank? %>
 	<li><%= link_to 'Venues', club_venues_path(@club) %></li>
-	<% if @venue %>
+	<% if @venue && !@venue.id.blank? %>
 		<li><%= link_to 'News', club_venue_news_index_url(@club, @venue) %></li>
 	<% end %>
+<% end %>
+<li><%= link_to 'Sponsors', sponsors_path %></li>
+
+<% if user_signed_in? %>
+  <li class="nav navbar-nav navbar-right"><%= link_to 'Edit account', edit_user_registration_path %></li>
+<% else %>
+  <li class="nav navbar-nav navbar-right"><%= link_to 'Sign up', new_user_registration_path %></li>
 <% end %>
 
 <% if user_signed_in? %>
   <% if current_user.has_role? :admin %>
-    <li><%= link_to 'Admin', users_path %></li>
+    <li class="nav navbar-nav navbar-right"><%= link_to 'Admin', users_path %></li>
   <% end %>
 <% end %>

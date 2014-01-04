@@ -1,24 +1,20 @@
 <h1>Listing clubs</h1>
 
-<table>
+<table class="table table-bordered table-striped">
   <thead>
     <tr>
+      <th>Name</th>
       <th>Address</th>
       <th>Closed</th>
       <th>Contacts</th>
       <th>Email</th>
       <th>Fax</th>
       <th>Instructions</th>
-      <th>Latitude</th>
-      <th>Longitude</th>
-      <th>Name</th>
-      <th>Note</th>
       <th>Path</th>
       <th>Position</th>
       <th>Season</th>
       <th>Telephone</th>
       <th>Website</th>
-      <th>Image</th>
       <th></th>
       <th></th>
       <th></th>
@@ -28,22 +24,18 @@
   <tbody>
     <% @clubs.each do |club| %>
       <tr>
+        <td><%= link_to club.name, club %></td>
         <td><%= club.address %></td>
         <td><%= club.closed %></td>
         <td><%= club.contacts %></td>
         <td><%= club.email %></td>
         <td><%= club.fax %></td>
         <td><%= club.instructions %></td>
-        <td><%= club.latitude %></td>
-        <td><%= club.longitude %></td>
-        <td><%= club.name %></td>
-        <td><%= club.note %></td>
         <td><%= club.path %></td>
         <td><%= club.position %></td>
         <td><%= club.season %></td>
         <td><%= club.telephone %></td>
         <td><%= club.website %></td>
-        <td><%= club.image_id %></td>
         <td><%= link_to 'Show', club %></td>
         <td><%= link_to 'Edit', edit_club_path(club) %></td>
         <td><%= link_to 'Destroy', club, method: :delete, data: { confirm: 'Are you sure?' } %></td>

@@ -14,6 +14,8 @@ gem 'devise_invitable'
 gem 'figaro'
 gem 'mysql2'
 gem 'rolify'
+gem 'carrierwave'
+gem 'jquery-fileupload-rails' # Asynchronous file upload
 group :development do
   gem 'better_errors'
   gem 'binding_of_caller', :platforms=>[:mri_19, :mri_20, :rbx]
