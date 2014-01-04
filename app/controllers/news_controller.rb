@@ -1,6 +1,7 @@
 class NewsController < ApplicationController
   before_action :set_news, only: [:show, :edit, :update, :destroy]
-  before_action :set_venue, only: [:show, :edit, :update, :destroy]
+  before_action :set_venue
+  before_action :set_club
 
   # GET /news
   # GET /news.json
@@ -29,7 +30,7 @@ class NewsController < ApplicationController
     @news.venue_id = @venue.id
     respond_to do |format|
       if @news.save
-        format.html { redirect_to @news, notice: 'News was successfully created.' }
+        format.html { redirect_to [@club, @venue, @news], notice: 'News was successfully created.' }
         format.json { render action: 'show', status: :created, location: @news }
       else
         format.html { render action: 'new' }
@@ -43,7 +44,7 @@ class NewsController < ApplicationController
   def update
     respond_to do |format|
       if @news.update(news_params)
-        format.html { redirect_to @news, notice: 'News was successfully updated.' }
+        format.html { redirect_to [@club, @venue, @news], notice: 'News was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: 'edit' }
@@ -57,7 +58,7 @@ class NewsController < ApplicationController
   def destroy
     @news.destroy
     respond_to do |format|
-      format.html { redirect_to news_index_url }
+      format.html { redirect_to club_venue_news_index_url(@club, @venue) }
       format.json { head :no_content }
     end
   end
@@ -65,16 +66,22 @@ class NewsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
 
+    def set_news
+      @news = News.find(params[:id])
+    end
+
+    def set_club
+      if params[:club_id]
+        @club = Club.find(params[:club_id])
+      end
+    end
+
     def set_venue
       if params[:venue_id]
         @venue = Venue.find(params[:venue_id])
       end
     end
     
-    def set_news
-      @news = News.find(params[:id])
-    end
-
     # Never trust parameters from the scary internet, only allow the white list through.
     def news_params
       params.require(:news).permit(:title, :subtitle, :finish, :show, :start)

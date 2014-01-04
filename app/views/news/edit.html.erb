@@ -2,5 +2,5 @@
 
 <%= render 'form' %>
 
-<%= link_to 'Show', @news %> |
-<%= link_to 'Back', news_index_path %>
+<%= link_to 'Show', [@club, @venue, @news] %> |
+<%= link_to 'Back', club_venue_news_index_path(@club, @venue) %>

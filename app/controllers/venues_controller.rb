@@ -56,7 +56,7 @@ class VenuesController < ApplicationController
   def destroy
     @venue.destroy
     respond_to do |format|
-      format.html { redirect_to venues_url }
+      format.html { redirect_to club_venues_url(@club) }
       format.json { head :no_content }
     end
   end

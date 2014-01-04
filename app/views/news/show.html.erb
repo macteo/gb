@@ -30,5 +30,5 @@
   <%= @news.start %>
 </p>
 
-<%= link_to 'Edit', edit_news_path(@news) %> |
-<%= link_to 'Back', news_index_path %>
+<%= link_to 'Edit', edit_club_venue_news_path(@club, @venue, @news) %> |
+<%= link_to 'Back', club_venue_news_index_path(@club, @venue) %>
