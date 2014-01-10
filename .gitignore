@@ -83,3 +83,15 @@ pickle-email-*.html
 
 # Ignore uploads
 /public/uploads/*/*.*
+public/uploads/club/file/1/IMG_0012.PNG
+public/uploads/club/file/1/iphone_2x_IMG_0012.PNG
+public/uploads/club/file/1/iphone_IMG_0012.PNG
+public/uploads/club/file/1/thumb_logoTrasparente.png
+public/uploads/sponsor/file/1/IMG_0004.PNG
+public/uploads/sponsor/file/1/iphone_2x_IMG_0004.PNG
+public/uploads/sponsor/file/1/iphone_IMG_0004.PNG
+public/uploads/tmp/20140110-1532-15313-5218/logoTrasparente.png
+public/uploads/tmp/20140110-1532-15313-5218/thumb_logoTrasparente.png
+public/uploads/venue/file/1/furgone-famiglia-pin_.jpg
+public/uploads/venue/file/1/iphone_2x_furgone-famiglia-pin_.jpg
+public/uploads/venue/file/1/iphone_furgone-famiglia-pin_.jpg
