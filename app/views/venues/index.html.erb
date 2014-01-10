@@ -1,21 +1,14 @@
-<h1>Listing venues</h1>
-
+<h1>Elenco Esercizi</h1>
+<p>
+    <%= link_to 'Nuovo Esercizio', new_club_venue_path(@club), class: "btn btn-primary" %>
+</p>
 <table class="table table-bordered table-striped">
   <thead>
     <tr>
-      <th>Name</th>
-      <th>Address</th>
-      <th>Category</th>
-      <th>Closed</th>
-      <th>Contacts</th>
-      <th>Desc</th>
+      <th>Nome</th>
+      <th>Categoria</th>
       <th>Email</th>
-      <th>Instructions</th>
-      <th>Path</th>
-      <th>Telephone</th>
-      <th>Website</th>
-      <th></th>
-      <th></th>
+      <th>Sito Web</th>
       <th></th>
     </tr>
   </thead>
@@ -23,24 +16,14 @@
   <tbody>
     <% @venues.each do |venue| %>
       <tr>
-        <td><%= link_to venue.name, [@club, venue] %></td>
-        <td><%= venue.address %></td>
+        <td><%= link_to venue.name, [@club, venue], :class => "btn btn-info btn-xs" %></td>
         <td><%= venue.category %></td>
-        <td><%= venue.closed %></td>
-        <td><%= venue.contacts %></td>
-        <td><%= venue.desc %></td>
         <td><%= venue.email %></td>
-        <td><%= venue.instructions %></td>
-        <td><%= venue.path %></td>
-        <td><%= venue.telephone %></td>
         <td><%= venue.website %></td>
-        <td><%= link_to 'Edit', edit_club_venue_path(@club, venue) %></td>
-        <td><%= link_to 'Destroy', [@club, venue], method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td>
+            <%= link_to 'Modifica', edit_club_venue_path(@club, venue), :class => "btn btn-warning btn-xs" %>
+            <%= link_to 'Distruggi', [@club, venue], method: :delete, data: { confirm: 'Sei sicuro?' }, :class => "btn btn-danger btn-xs" %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
-
-<br>
-
-<%= link_to 'New Venue', new_club_venue_path(@club), class: "btn btn-primary" %>

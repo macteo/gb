@@ -1,34 +1,34 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Title:</strong>
+  <strong>Titolo:</strong>
   <%= @news.title %>
 </p>
 
 <p>
-  <strong>Subtitle:</strong>
+  <strong>Sottotitolo:</strong>
   <%= @news.subtitle %>
 </p>
 
 <p>
-  <strong>Venue:</strong>
-  <%= @news.venue_id %>
+  <strong>Club:</strong>
+  <%= @news.club.name %>
 </p>
 
 <p>
-  <strong>Finish:</strong>
-  <%= @news.finish %>
-</p>
-
-<p>
-  <strong>Show:</strong>
+  <strong>Mostra dal:</strong>
   <%= @news.show %>
 </p>
 
 <p>
-  <strong>Start:</strong>
+  <strong>Inizio:</strong>
   <%= @news.start %>
 </p>
 
-<%= link_to 'Edit', edit_club_venue_news_path(@club, @venue, @news) %> |
-<%= link_to 'Back', club_venue_news_index_path(@club, @venue) %>
+<p>
+  <strong>Fine:</strong>
+  <%= @news.finish %>
+</p>
+
+<%= link_to 'Modifica', edit_club_news_path(@club, @news) %> |
+<%= link_to 'Indietro', club_news_index_path(@club) %>

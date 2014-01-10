@@ -1,11 +1,11 @@
 <% if @club && !@club.id.blank? %>
-	<ol class="breadcrumb">
-	  <li><%= link_to @club.name, club_path(@club) %></li>
-	  <% if @venue && !@venue.id.blank? %>
-		  <li><%= link_to @venue.name , club_venue_path(@club, @venue) %></li>
-		  <% if @news && !@news.is_a?(ActiveRecord::Relation) && !@news.id.blank? %>
-			  <li><%= link_to @news.title , club_venue_news_path(@club, @venue, @news) %></li>
-		  <% end %>
-	  <% end %>
-	</ol>
+    <ol class="breadcrumb">
+      <li><%= link_to @club.name, club_path(@club) %></li>
+      <% if @news && !@news.is_a?(ActiveRecord::Relation) && !@news.id.blank? %>
+          <li><%= link_to @news.title , club_news_path(@club, @news) %></li>
+      <% end %>
+      <% if @venue && !@venue.id.blank? %>
+          <li><%= link_to @venue.name , club_venue_path(@club, @venue) %></li>
+      <% end %>
+    </ol>
 <% end %>

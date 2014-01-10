@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140104210628) do
+ActiveRecord::Schema.define(version: 20140110124659) do
 
   create_table "clubs", force: true do |t|
     t.text     "address"
@@ -47,13 +47,15 @@ ActiveRecord::Schema.define(version: 20140104210628) do
   create_table "news", force: true do |t|
     t.string   "title"
     t.string   "subtitle"
-    t.string   "venue_id"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.datetime "start"
     t.datetime "finish"
     t.datetime "show"
+    t.integer  "club_id"
   end
+
+  add_index "news", ["club_id"], name: "index_news_on_club_id", using: :btree
 
   create_table "roles", force: true do |t|
     t.string   "name"

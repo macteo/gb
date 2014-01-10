@@ -10,72 +10,71 @@
       </ul>
     </div>
   <% end %>
-
   <div class="field">
-    <%= f.label :address %><br>
-    <%= f.text_area :address %>
+    <%= f.label "Nome" %><br>
+    <%= f.text_field :name, :size => "90" %>
   </div>
   <div class="field">
-    <%= f.label :closed %><br>
-    <%= f.text_field :closed %>
+    <%= f.label "Indirizzo" %><br>
+    <%= f.text_area :address, :size => "90x1" %>
   </div>
   <div class="field">
-    <%= f.label :contacts %><br>
-    <%= f.text_field :contacts %>
+    <%= f.label "Giorno di Chiusura" %><br>
+    <%= f.text_field :closed, :size => "90" %>
+  </div>
+  <div class="field">
+    <%= f.label "Contatti" %><br>
+    <%= f.text_field :contacts, :size => "90" %>
   </div>
   <div class="field">
     <%= f.label :email %><br>
     <%= f.text_field :email %>
   </div>
   <div class="field">
+    <%= f.label "Telefono" %><br>
+    <%= f.text_field :telephone %>
+  </div>
+  <div class="field">
     <%= f.label :fax %><br>
     <%= f.text_field :fax %>
   </div>
   <div class="field">
-    <%= f.label :instructions %><br>
-    <%= f.text_area :instructions %>
+    <%= f.label "Come arrivare" %><br>
+    <%= f.text_area :instructions, :size => "90x5" %>
   </div>
   <div class="field">
-    <%= f.label :latitude %><br>
+    <%= f.label "Latitudine" %><br>
     <%= f.text_field :latitude %>
   </div>
   <div class="field">
-    <%= f.label :longitude %><br>
+    <%= f.label "Longitudine" %><br>
     <%= f.text_field :longitude %>
   </div>
   <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
-  </div>
-  <div class="field">
     <%= f.label :note %><br>
-    <%= f.text_area :note %>
+    <%= f.text_area :note, :size => "90x5" %>
   </div>
   <div class="field">
-    <%= f.label :path %><br>
-    <%= f.text_area :path %>
+    <%= f.label "Percorso" %><br>
+    <%= f.text_area :path, :size => "90x1" %>
   </div>
   <div class="field">
-    <%= f.label :position %><br>
-    <%= f.text_field :position %>
+    <%= f.label "Posizione" %><br>
+    <%= f.text_field :position, :size => "90" %>
   </div>
   <div class="field">
-    <%= f.label :season %><br>
-    <%= f.text_field :season %>
+    <%= f.label "Stagione di apertura" %><br>
+    <%= f.text_field :season, :size => "90" %>
   </div>
   <div class="field">
-    <%= f.label :telephone %><br>
-    <%= f.text_field :telephone %>
-  </div>
-  <div class="field">
-    <%= f.label :website %><br>
-    <%= f.text_field :website %>
+    <%= f.label "Sito Web" %><br>
+    <%= f.text_field :website, :size => "90" %>
   </div>
   <div class="field">
     <%= f.label :image_id %><br>
     <%= f.number_field :image_id %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Salva Circolo", :class => "btn btn-primary" %>
   </div>
 <% end %>

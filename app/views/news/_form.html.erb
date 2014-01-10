@@ -1,4 +1,4 @@
-<%= form_for([@club, @venue, @news]) do |f| %>
+<%= form_for([@club, @news]) do |f| %>
   <% if @news.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@news.errors.count, "error") %> prohibited this news from being saved:</h2>
@@ -12,27 +12,27 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :title %><br>
-    <%= f.text_area :title %>
+    <%= f.label "Titolo" %><br>
+    <%= f.text_field :title, :size => "90" %>
   </div>
   <div class="field">
-    <%= f.label :subtitle %><br>
-    <%= f.text_area :subtitle %>
+    <%= f.label "Sottotitolo" %><br>
+    <%= f.text_area :subtitle, :size => "90x5" %>
   </div>
   <div class="field">
-    <%= f.label :show %><br>
+    <%= f.label "Data in cui iniziare a mostrare la notizia" %><br>
     <%= f.date_select :show %>
   </div>
   <div class="field">
-    <%= f.label :start %><br>
+    <%= f.label "Data di inizio validità" %><br>
     <%= f.date_select :start %>
   </div>
   <div class="field">
-    <%= f.label :finish %><br>
+    <%= f.label "Data di fine validità" %><br>
     <%= f.date_select :finish %>
   </div>
 
   <div class="actions">
-    <%= f.submit :class => "btn btn-primary" %>
+    <%= f.submit "Salva Notizia", :class => "btn btn-primary" %>
   </div>
 <% end %>

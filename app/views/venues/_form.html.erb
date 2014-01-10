@@ -12,63 +12,59 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :address %><br>
-    <%= f.text_area :address %>
+    <%= f.label "Nome" %><br>
+    <%= f.text_field :name, :size => "90" %>
   </div>
   <div class="field">
-    <%= f.label :category %><br>
+    <%= f.label "Indirizzo" %><br>
+    <%= f.text_field :address, :size => "90" %>
+  </div>
+  <div class="field">
+    <%= f.label "Categoria" %><br>
     <%= f.number_field :category %>
   </div>
   <div class="field">
-    <%= f.label :closed %><br>
-    <%= f.text_field :closed %>
+    <%= f.label "Telefono" %><br>
+    <%= f.text_field :telephone %>
   </div>
   <div class="field">
-    <%= f.label :contacts %><br>
-    <%= f.text_area :contacts %>
+    <%= f.label "Chiusura" %><br>
+    <%= f.text_field :closed, :size => "90" %>
   </div>
   <div class="field">
-    <%= f.label :desc %><br>
-    <%= f.text_area :desc %>
+    <%= f.label "Contatti" %><br>
+    <%= f.text_area :contacts, :size => "90x5" %>
+  </div>
+  <div class="field">
+    <%= f.label "Descrizione" %><br>
+    <%= f.text_area :desc, :size => "90x5" %>
   </div>
   <div class="field">
     <%= f.label :email %><br>
     <%= f.text_field :email %>
   </div>
   <div class="field">
-    <%= f.label :instructions %><br>
-    <%= f.text_area :instructions %>
+    <%= f.label "Istruzioni" %><br>
+    <%= f.text_area :instructions, :size => "90x5" %>
   </div>
   <div class="field">
-    <%= f.label :latitude %><br>
+    <%= f.label "Latitudine" %><br>
     <%= f.text_field :latitude %>
   </div>
   <div class="field">
-    <%= f.label :longitude %><br>
+    <%= f.label "Longitudine" %><br>
     <%= f.text_field :longitude %>
   </div>
   <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
-  </div>
-  <div class="field">
     <%= f.label :note %><br>
-    <%= f.text_area :note %>
-  </div>
-  <div class="field">
-    <%= f.label :path %><br>
-    <%= f.text_area :path %>
-  </div>
-  <div class="field">
-    <%= f.label :telephone %><br>
-    <%= f.text_field :telephone %>
+    <%= f.text_area :note, :size => "90x5" %>
   </div>
   <div class="field">
     <%= f.label :website %><br>
-    <%= f.text_field :website %>
+    <%= f.text_field :website, :size => "90" %>
   </div>
   
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Salva Esercizio", :class => "btn btn-primary" %>
   </div>
 <% end %>

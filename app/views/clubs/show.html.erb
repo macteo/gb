@@ -1,18 +1,23 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Address:</strong>
+    <%= link_to "Esercizi", club_venues_path(@club), :class => "btn btn-primary" %>
+    <%= link_to "Promozioni", club_news_index_url(@club), :class => "btn btn-info" %>
+</p>
+
+<p>
+  <strong>Nome:</strong>
+  <%= @club.name %>
+</p>
+
+<p>
+  <strong>Indirizzo:</strong>
   <%= @club.address %>
 </p>
 
 <p>
-  <strong>Closed:</strong>
+  <strong>Giorno di Chiusura:</strong>
   <%= @club.closed %>
-</p>
-
-<p>
-  <strong>Contacts:</strong>
-  <%= @club.contacts %>
 </p>
 
 <p>
@@ -21,13 +26,43 @@
 </p>
 
 <p>
+  <strong>Telefono:</strong>
+  <%= @club.telephone %>
+</p>
+
+<p>
   <strong>Fax:</strong>
   <%= @club.fax %>
 </p>
 
 <p>
-  <strong>Instructions:</strong>
+  <strong>Contatti:</strong>
+  <%= @club.contacts %>
+</p>
+
+<p>
+  <strong>Come arrivare:</strong>
   <%= @club.instructions %>
+</p>
+
+<p>
+  <strong>Percorso:</strong>
+  <%= @club.path %>
+</p>
+
+<p>
+  <strong>Posizione:</strong>
+  <%= @club.position %>
+</p>
+
+<p>
+  <strong>Stagione:</strong>
+  <%= @club.season %>
+</p>
+
+<p>
+  <strong>Sito Web:</strong>
+  <%= @club.website %>
 </p>
 
 <p>
@@ -41,44 +76,12 @@
 </p>
 
 <p>
-  <strong>Name:</strong>
-  <%= @club.name %>
-</p>
-
-<p>
   <strong>Note:</strong>
   <%= @club.note %>
 </p>
 
 <p>
-  <strong>Path:</strong>
-  <%= @club.path %>
+    <%= link_to 'Modifica', edit_club_path(@club), :class => "btn btn-warning" %>
+    <%= link_to 'Torna ai Club', clubs_path, :class => "btn btn-success" %>
 </p>
 
-<p>
-  <strong>Position:</strong>
-  <%= @club.position %>
-</p>
-
-<p>
-  <strong>Season:</strong>
-  <%= @club.season %>
-</p>
-
-<p>
-  <strong>Telephone:</strong>
-  <%= @club.telephone %>
-</p>
-
-<p>
-  <strong>Website:</strong>
-  <%= @club.website %>
-</p>
-
-<p>
-  <strong>Image:</strong>
-  <%= @club.image_id %>
-</p>
-
-<%= link_to 'Edit', edit_club_path(@club) %> |
-<%= link_to 'Back', clubs_path %>

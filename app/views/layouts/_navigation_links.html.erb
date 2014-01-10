@@ -1,16 +1,14 @@
-<li><%= link_to 'Clubs', clubs_path %></li>
+<li><%= link_to 'Circoli', clubs_path %></li>
 <% if @club && !@club.id.blank? %>
-	<li><%= link_to 'Venues', club_venues_path(@club) %></li>
-	<% if @venue && !@venue.id.blank? %>
-		<li><%= link_to 'News', club_venue_news_index_url(@club, @venue) %></li>
-	<% end %>
+    <li><%= link_to 'Esercizi', club_venues_path(@club) %></li>
+    <li><%= link_to 'Promozioni', club_news_index_url(@club, @venue) %></li>
 <% end %>
-<li><%= link_to 'Sponsors', sponsors_path %></li>
+<li><%= link_to 'Sponsor', sponsors_path %></li>
 
 <% if user_signed_in? %>
-  <li class="nav navbar-nav navbar-right"><%= link_to 'Edit account', edit_user_registration_path %></li>
+  <li class="nav navbar-nav navbar-right"><%= link_to 'Modifica account', edit_user_registration_path %></li>
 <% else %>
-  <li class="nav navbar-nav navbar-right"><%= link_to 'Sign up', new_user_registration_path %></li>
+  <li class="nav navbar-nav navbar-right"><%= link_to 'Registrati', new_user_registration_path %></li>
 <% end %>
 
 <% if user_signed_in? %>

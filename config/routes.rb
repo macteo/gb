@@ -5,9 +5,9 @@ GolfBoxBackend::Application.routes.draw do
   resources :news, :defaults => { :format => 'json' }
   resources :venues, :defaults => { :format => 'json' }
   resources :clubs do 
+    resources :news
     resources :venues do 
       resource :image
-      resources :news
     end
   end
 
