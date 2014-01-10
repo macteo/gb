@@ -4,4 +4,5 @@ class Club < Imaged
   has_one :image
   
   validates :name, presence: true
+  validates :region, presence: true
 end

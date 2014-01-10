@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140110135709) do
+ActiveRecord::Schema.define(version: 20140110195745) do
 
   create_table "clubs", force: true do |t|
     t.text     "address"
@@ -33,7 +33,10 @@ ActiveRecord::Schema.define(version: 20140110135709) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "file"
+    t.integer  "region"
   end
+
+  add_index "clubs", ["region"], name: "index_clubs_on_region", using: :btree
 
   create_table "images", force: true do |t|
     t.string   "name"

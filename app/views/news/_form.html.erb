@@ -11,25 +11,25 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="form-group">
     <%= f.label "Titolo" %><br>
-    <%= f.text_field :title, :size => "90" %>
+    <%= f.text_field :title, :class => "form-control" %>
   </div>
-  <div class="field">
+  <div class="form-group">
     <%= f.label "Sottotitolo" %><br>
-    <%= f.text_area :subtitle, :size => "90x5" %>
+    <%= f.text_area :subtitle, :class => "form-control" %>
   </div>
-  <div class="field">
+  <div class="form-group">
     <%= f.label "Data in cui iniziare a mostrare la notizia" %><br>
-    <%= f.date_select :show %>
+    <%= f.date_select :show, :class => "form-control" %>
   </div>
-  <div class="field">
+  <div class="form-group">
     <%= f.label "Data di inizio validità" %><br>
-    <%= f.date_select :start %>
+    <%= f.date_select :start, :class => "form-control" %>
   </div>
-  <div class="field">
+  <div class="form-group">
     <%= f.label "Data di fine validità" %><br>
-    <%= f.date_select :finish %>
+    <%= f.date_select :finish, :class => "form-control" %>
   </div>
   <br />
   <div class="actions">

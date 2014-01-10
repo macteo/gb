@@ -11,30 +11,30 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="form-group">
     <%= f.label "Titolo" %><br>
-    <%= f.text_field :title, :size => "90" %>
+    <%= f.text_field :title, :class => "form-control" %>
   </div>
-  <div class="field">
+  <div class="form-group">
     <%= f.label "Sottotitolo" %><br>
-    <%= f.text_field :subtitle, :size => "90" %>
+    <%= f.text_field :subtitle, :class => "form-control" %>
   </div>
-  <div class="field">
+  <div class="form-group">
     <%= f.label "Immagine" %><br>
-    <%= f.file_field :file %>
+    <%= f.file_field :file, :class => "form-control" %>
     <%= f.hidden_field :file_cache %>
   </div>
-  <div class="field">
+  <div class="form-group">
     <%= f.label "Inizio validità" %><br>
-    <%= f.date_select :start %>
+    <%= f.date_select :start, :class => "form-control" %>
   </div>
-  <div class="field">
+  <div class="form-group">
     <%= f.label "Fine Validità" %><br>
-    <%= f.date_select :finish %>
+    <%= f.date_select :finish, :class => "form-control" %>
   </div>
-  <div class="field">
+  <div class="form-group">
     <%= f.label "Sito Web" %><br>
-    <%= f.text_field :website, :size => "90" %>
+    <%= f.text_field :website, :class => "form-control" %>
   </div>
   <br/>
   <div class="actions">

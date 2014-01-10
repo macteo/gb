@@ -1,83 +1,101 @@
-<%= form_for(@club) do |f| %>
-  <% if @club.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@club.errors.count, "error") %> prohibited this club from being saved:</h2>
+<div class="row">
+    <div class="col-md-6">
+        <%= form_for(@club) do |f| %>
+          <% if @club.errors.any? %>
+            <div id="error_explanation">
+              <h2><%= pluralize(@club.errors.count, "error") %> prohibited this club from being saved:</h2>
 
-      <ul>
-      <% @club.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
+              <ul>
+              <% @club.errors.full_messages.each do |msg| %>
+                <li><%= msg %></li>
+              <% end %>
+              </ul>
+            </div>
+          <% end %>
+          <div class="form-group">
+            <%= f.label "Nome" %><br>
+            <%= f.text_field :name, :class => "form-control" %>
+          </div>
+          <div class="form-group">
+            <%= f.label "Giorno di Chiusura" %><br>
+            <%= f.text_field :closed, :class => "form-control" %>
+          </div>
+          <div class="form-group">
+            <%= f.label "Contatti" %><br>
+            <%= f.text_field :contacts, :class => "form-control" %>
+          </div>
+          <div class="form-group">
+            <%= f.label :email %><br>
+            <%= f.text_field :email, :class => "form-control" %>
+          </div>
+          <div class="form-group">
+            <%= f.label "Telefono" %><br>
+            <%= f.text_field :telephone, :class => "form-control" %>
+          </div>
+          <div class="form-group">
+            <%= f.label :fax %><br>
+            <%= f.text_field :fax, :class => "form-control" %>
+          </div>
+          <div class="form-group">
+            <%= f.label "Regione" %><br>
+            <%= f.collection_select :region, REGIONS, :first, :last, {:prompt => "Scegli la Regione"}, {:class => "form-control"} %>
+          </div>
+          <div class="form-group">
+            <%= f.label "Come arrivare" %><br>
+            <%= f.text_area :instructions, :class => "form-control" %>
+          </div>
+          <div class="form-group">
+            <%= f.label :note %><br>
+            <%= f.text_area :note, :class => "form-control" %>
+          </div>
+          <div class="form-group">
+            <%= f.label "Percorso" %><br>
+            <%= f.text_area :path, :class => "form-control" %>
+          </div>
+          <div class="form-group">
+            <%= f.label "Posizione" %><br>
+            <%= f.text_field :position, :class => "form-control" %>
+          </div>
+          <div class="form-group">
+            <%= f.label "Stagione di apertura" %><br>
+            <%= f.text_field :season, :class => "form-control" %>
+          </div>
+          <div class="form-group">
+            <%= f.label "Sito Web" %><br>
+            <%= f.text_field :website, :class => "form-control" %>
+          </div>
+          <div class="form-group">
+            <%= f.label "Immagine" %><br>
+            <%= f.file_field :file, :class => "form-control" %>
+            <%= f.hidden_field :file_cache %>
+          </div>
+          <div class="form-group">
+            <%= f.label "Indirizzo" %><br>
+            <%= f.text_area :address, :class => "form-control" %>
+          </div>
+          <div class="form-group">
+            <%= f.label "Latitudine" %><br>
+            <%= f.text_field :latitude, :class => "form-control" %>
+          </div>
+          <div class="form-group">
+            <%= f.label "Longitudine" %><br>
+            <%= f.text_field :longitude, :class => "form-control" %>
+          </div>
+          <br />
+          <div class="actions">
+            <%= f.submit "Salva Circolo", :class => "btn btn-primary" %>
+          </div>
+        <% end %>
     </div>
-  <% end %>
-  <div class="field">
-    <%= f.label "Nome" %><br>
-    <%= f.text_field :name, :size => "90" %>
-  </div>
-  <div class="field">
-    <%= f.label "Indirizzo" %><br>
-    <%= f.text_area :address, :size => "90x1" %>
-  </div>
-  <div class="field">
-    <%= f.label "Giorno di Chiusura" %><br>
-    <%= f.text_field :closed, :size => "90" %>
-  </div>
-  <div class="field">
-    <%= f.label "Contatti" %><br>
-    <%= f.text_field :contacts, :size => "90" %>
-  </div>
-  <div class="field">
-    <%= f.label :email %><br>
-    <%= f.text_field :email %>
-  </div>
-  <div class="field">
-    <%= f.label "Telefono" %><br>
-    <%= f.text_field :telephone %>
-  </div>
-  <div class="field">
-    <%= f.label :fax %><br>
-    <%= f.text_field :fax %>
-  </div>
-  <div class="field">
-    <%= f.label "Come arrivare" %><br>
-    <%= f.text_area :instructions, :size => "90x5" %>
-  </div>
-  <div class="field">
-    <%= f.label "Latitudine" %><br>
-    <%= f.text_field :latitude %>
-  </div>
-  <div class="field">
-    <%= f.label "Longitudine" %><br>
-    <%= f.text_field :longitude %>
-  </div>
-  <div class="field">
-    <%= f.label :note %><br>
-    <%= f.text_area :note, :size => "90x5" %>
-  </div>
-  <div class="field">
-    <%= f.label "Percorso" %><br>
-    <%= f.text_area :path, :size => "90x1" %>
-  </div>
-  <div class="field">
-    <%= f.label "Posizione" %><br>
-    <%= f.text_field :position, :size => "90" %>
-  </div>
-  <div class="field">
-    <%= f.label "Stagione di apertura" %><br>
-    <%= f.text_field :season, :size => "90" %>
-  </div>
-  <div class="field">
-    <%= f.label "Sito Web" %><br>
-    <%= f.text_field :website, :size => "90" %>
-  </div>
-  <div class="field">
-    <%= f.label "Immagine" %><br>
-    <%= f.file_field :file %>
-    <%= f.hidden_field :file_cache %>
-  </div>
-  <br />
-  <div class="actions">
-    <%= f.submit "Salva Circolo", :class => "btn btn-primary" %>
-  </div>
-  <br />
-<% end %>
+    <div class="col-md-6">
+        <%= image_tag(@club.file_url(:iphone_2x), :class => "img-thumbnail", :style => "width:100%;") if @club.file? %>
+        <br />
+        <div style="height:500px; width:100%;">
+            <div id="map-canvas" style="width:100%; height:100%;"></div>
+        </div>
+    </div>
+</div>
+
+<%= render :partial => 'layouts/map_form', :locals => {:item => 'club'} %>
+
+<br />
