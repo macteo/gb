@@ -4,82 +4,88 @@
     <%= link_to "Esercizi", club_venues_path(@club), :class => "btn btn-primary" %>
     <%= link_to "Promozioni", club_news_index_url(@club), :class => "btn btn-info" %>
 </p>
+<div class="row"> 
+    <div class="col-md-8">
+        <p>
+          <strong>Nome:</strong>
+          <%= @club.name %>
+        </p>
 
-<p>
-  <strong>Nome:</strong>
-  <%= @club.name %>
-</p>
+        <p>
+          <strong>Indirizzo:</strong>
+          <%= @club.address %>
+        </p>
 
-<p>
-  <strong>Indirizzo:</strong>
-  <%= @club.address %>
-</p>
+        <p>
+          <strong>Giorno di Chiusura:</strong>
+          <%= @club.closed %>
+        </p>
 
-<p>
-  <strong>Giorno di Chiusura:</strong>
-  <%= @club.closed %>
-</p>
+        <p>
+          <strong>Email:</strong>
+          <%= @club.email %>
+        </p>
 
-<p>
-  <strong>Email:</strong>
-  <%= @club.email %>
-</p>
+        <p>
+          <strong>Telefono:</strong>
+          <%= @club.telephone %>
+        </p>
 
-<p>
-  <strong>Telefono:</strong>
-  <%= @club.telephone %>
-</p>
+        <p>
+          <strong>Fax:</strong>
+          <%= @club.fax %>
+        </p>
 
-<p>
-  <strong>Fax:</strong>
-  <%= @club.fax %>
-</p>
+        <p>
+          <strong>Contatti:</strong>
+          <%= @club.contacts %>
+        </p>
 
-<p>
-  <strong>Contatti:</strong>
-  <%= @club.contacts %>
-</p>
+        <p>
+          <strong>Come arrivare:</strong>
+          <%= @club.instructions %>
+        </p>
 
-<p>
-  <strong>Come arrivare:</strong>
-  <%= @club.instructions %>
-</p>
+        <p>
+          <strong>Percorso:</strong>
+          <%= @club.path %>
+        </p>
 
-<p>
-  <strong>Percorso:</strong>
-  <%= @club.path %>
-</p>
+        <p>
+          <strong>Posizione:</strong>
+          <%= @club.position %>
+        </p>
 
-<p>
-  <strong>Posizione:</strong>
-  <%= @club.position %>
-</p>
+        <p>
+          <strong>Stagione:</strong>
+          <%= @club.season %>
+        </p>
 
-<p>
-  <strong>Stagione:</strong>
-  <%= @club.season %>
-</p>
+        <p>
+          <strong>Sito Web:</strong>
+          <%= @club.website %>
+        </p>
 
-<p>
-  <strong>Sito Web:</strong>
-  <%= @club.website %>
-</p>
+        <p>
+          <strong>Latitude:</strong>
+          <%= @club.latitude %>
+        </p>
 
-<p>
-  <strong>Latitude:</strong>
-  <%= @club.latitude %>
-</p>
+        <p>
+          <strong>Longitude:</strong>
+          <%= @club.longitude %>
+        </p>
 
-<p>
-  <strong>Longitude:</strong>
-  <%= @club.longitude %>
-</p>
+        <p>
+          <strong>Note:</strong>
+          <%= @club.note %>
+        </p>
+    </div>
 
-<p>
-  <strong>Note:</strong>
-  <%= @club.note %>
-</p>
-
+    <div class="col-md-4">
+        <%= image_tag(@club.file_url(:iphone_2x), :class => "img-thumbnail") if @club.file? %>
+    </div>
+</div>
 <p>
     <%= link_to 'Modifica', edit_club_path(@club), :class => "btn btn-warning" %>
     <%= link_to 'Torna ai Club', clubs_path, :class => "btn btn-success" %>

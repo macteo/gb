@@ -17,17 +17,17 @@
 
 <p>
   <strong>Mostra dal:</strong>
-  <%= @news.show %>
+  <%= @news.show.strftime('%d-%m-%Y') %>
 </p>
 
 <p>
   <strong>Inizio:</strong>
-  <%= @news.start %>
+  <%= @news.start.strftime('%d-%m-%Y') %>
 </p>
 
 <p>
   <strong>Fine:</strong>
-  <%= @news.finish %>
+  <%= @news.finish.strftime('%d-%m-%Y') %>
 </p>
 
 <%= link_to 'Modifica', edit_club_news_path(@club, @news) %> |

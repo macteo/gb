@@ -1,76 +1,82 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Nome:</strong>
-  <%= @venue.name %>
-</p>
+<div class="row"> 
+    <div class="col-md-8">
+        <p>
+          <strong>Nome:</strong>
+          <%= @venue.name %>
+        </p>
 
-<p>
-  <strong>Descrizione:</strong>
-  <%= @venue.desc %>
-</p>
+        <p>
+          <strong>Descrizione:</strong>
+          <%= @venue.desc %>
+        </p>
 
 
-<p>
-  <strong>Indirizzo:</strong>
-  <%= @venue.address %>
-</p>
+        <p>
+          <strong>Indirizzo:</strong>
+          <%= @venue.address %>
+        </p>
 
-<p>
-  <strong>Categoria:</strong>
-  <%= @venue.category %>
-</p>
+        <p>
+          <strong>Categoria:</strong>
+          <%= @venue.category %>
+        </p>
 
-<p>
-  <strong>Giorno di Chiusura:</strong>
-  <%= @venue.closed %>
-</p>
+        <p>
+          <strong>Giorno di Chiusura:</strong>
+          <%= @venue.closed %>
+        </p>
 
-<p>
-  <strong>Contatti:</strong>
-  <%= @venue.contacts %>
-</p>
+        <p>
+          <strong>Contatti:</strong>
+          <%= @venue.contacts %>
+        </p>
 
-<p>
-  <strong>Email:</strong>
-  <%= @venue.email %>
-</p>
+        <p>
+          <strong>Email:</strong>
+          <%= @venue.email %>
+        </p>
 
-<p>
-  <strong>Istruzioni:</strong>
-  <%= @venue.instructions %>
-</p>
+        <p>
+          <strong>Istruzioni:</strong>
+          <%= @venue.instructions %>
+        </p>
 
-<p>
-  <strong>Latitudine:</strong>
-  <%= @venue.latitude %>
-</p>
+        <p>
+          <strong>Latitudine:</strong>
+          <%= @venue.latitude %>
+        </p>
 
-<p>
-  <strong>Longitudine:</strong>
-  <%= @venue.longitude %>
-</p>
+        <p>
+          <strong>Longitudine:</strong>
+          <%= @venue.longitude %>
+        </p>
 
-<p>
-  <strong>Note:</strong>
-  <%= @venue.note %>
-</p>
+        <p>
+          <strong>Note:</strong>
+          <%= @venue.note %>
+        </p>
 
-<p>
-  <strong>Telefono:</strong>
-  <%= @venue.telephone %>
-</p>
+        <p>
+          <strong>Telefono:</strong>
+          <%= @venue.telephone %>
+        </p>
 
-<p>
-  <strong>Sito Web:</strong>
-  <%= @venue.website %>
-</p>
+        <p>
+          <strong>Sito Web:</strong>
+          <%= @venue.website %>
+        </p>
 
-<p>
-  <strong>Club:</strong>
-  <%= @venue.club.name %>
-</p>
-
+        <p>
+          <strong>Club:</strong>
+          <%= @venue.club.name %>
+        </p>
+    </div>
+    <div class="col-md-4">
+        <%= image_tag(@venue.file_url(:iphone_2x), :class => "img-thumbnail") if @venue.file? %>
+    </div>
+</div>
 <p>
     <%= link_to 'Modifica', edit_club_venue_path(@club, @venue), :class => "btn btn-warning" %> <%= link_to 'Torna agli Esercizi', club_venues_path(@club), :class => "btn btn-success" %>
 </p>

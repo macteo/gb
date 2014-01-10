@@ -20,8 +20,9 @@
     <%= f.text_field :subtitle, :size => "90" %>
   </div>
   <div class="field">
-    <%= f.label :image_id %><br>
-    <%= f.text_field :image_id %>
+    <%= f.label "Immagine" %><br>
+    <%= f.file_field :file %>
+    <%= f.hidden_field :file_cache %>
   </div>
   <div class="field">
     <%= f.label "Inizio validità" %><br>
@@ -33,7 +34,7 @@
   </div>
   <div class="field">
     <%= f.label "Sito Web" %><br>
-    <%= f.text_field :website %>
+    <%= f.text_field :website, :size => "90" %>
   </div>
   <br/>
   <div class="actions">

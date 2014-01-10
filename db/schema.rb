@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140110124659) do
+ActiveRecord::Schema.define(version: 20140110135709) do
 
   create_table "clubs", force: true do |t|
     t.text     "address"
@@ -32,6 +32,7 @@ ActiveRecord::Schema.define(version: 20140110124659) do
     t.integer  "image_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "file"
   end
 
   create_table "images", force: true do |t|
@@ -77,6 +78,7 @@ ActiveRecord::Schema.define(version: 20140110124659) do
     t.datetime "updated_at"
     t.datetime "start"
     t.datetime "finish"
+    t.string   "file"
   end
 
   create_table "users", force: true do |t|
@@ -137,6 +139,7 @@ ActiveRecord::Schema.define(version: 20140110124659) do
     t.string   "club_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "file"
   end
 
 end

@@ -63,6 +63,11 @@
     <%= f.label :website %><br>
     <%= f.text_field :website, :size => "90" %>
   </div>
+  <div class="field">
+    <%= f.label "Immagine" %><br>
+    <%= f.file_field :file %>
+    <%= f.hidden_field :file_cache %>
+  </div>
   <br />
   <div class="actions">
     <%= f.submit "Salva Esercizio", :class => "btn btn-primary" %>
