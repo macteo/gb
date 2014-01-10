@@ -2,4 +2,6 @@
 
 <%= render 'form' %>
 
-<%= link_to 'Indietro', club_news_index_path(@club) %>
+<p>
+    <%= link_to 'Torna alle Promozioni', club_news_index_path(@club), :class => "btn btn-danger" %>
+</p>

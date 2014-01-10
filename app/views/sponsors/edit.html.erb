@@ -1,6 +1,8 @@
-<h1>Editing sponsor</h1>
+<h1>Modifica Sponsor</h1>
 
 <%= render 'form' %>
 
-<%= link_to 'Show', @sponsor %> |
-<%= link_to 'Indietro', sponsors_path %>
+<p>
+    <%= link_to 'Show', @sponsor, :class => "btn btn-info" %>
+    <%= link_to 'Indietro', sponsors_path, :class => "btn btn-success" %>
+</p>

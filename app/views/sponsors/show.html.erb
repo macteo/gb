@@ -1,34 +1,36 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Title:</strong>
+  <strong>Titolo:</strong>
   <%= @sponsor.title %>
 </p>
 
 <p>
-  <strong>Subtitle:</strong>
+  <strong>Sottotitolo:</strong>
   <%= @sponsor.subtitle %>
 </p>
 
 <p>
-  <strong>Image:</strong>
+  <strong>Immagine:</strong>
   <%= @sponsor.image_id %>
 </p>
 
 <p>
-  <strong>Finish:</strong>
+  <strong>Fine validità:</strong>
   <%= @sponsor.finish %>
 </p>
 
 <p>
-  <strong>Start:</strong>
+  <strong>Inizio validità:</strong>
   <%= @sponsor.start %>
 </p>
 
 <p>
-  <strong>Website:</strong>
+  <strong>Sito Web:</strong>
   <%= @sponsor.website %>
 </p>
 
-<%= link_to 'Edit', edit_sponsor_path(@sponsor) %> |
-<%= link_to 'Indietro', sponsors_path %>
+<p>
+    <%= link_to 'Modifica', edit_sponsor_path(@sponsor), :class => "btn btn-warning" %>
+    <%= link_to 'Torna agli sponsor', sponsors_path, :class => "btn btn-success" %>
+</p>

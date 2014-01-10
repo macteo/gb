@@ -2,5 +2,7 @@
 
 <%= render 'form' %>
 
-<%= link_to 'Mostra', @club %> |
-<%= link_to 'Indietro', clubs_path %>
+<p>
+    <%= link_to 'Mostra', @club, :class => "btn btn-warning" %>
+    <%= link_to 'Torna ai Circoli', clubs_path, :class => "btn btn-danger" %>
+</p>

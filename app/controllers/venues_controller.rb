@@ -28,7 +28,7 @@ class VenuesController < ApplicationController
     @venue.club_id = @club.id
     respond_to do |format|
       if @venue.save
-        format.html { redirect_to [@club, @venue], notice: 'Venue was successfully created.' }
+        format.html { redirect_to [@club, @venue], notice: 'Esercizio creato con successo.' }
         format.json { render action: 'show', status: :created, location: @venue }
       else
         format.html { render action: 'new' }
@@ -42,7 +42,7 @@ class VenuesController < ApplicationController
   def update
     respond_to do |format|
       if @venue.update(venue_params)
-        format.html { redirect_to [@club, @venue], notice: 'Venue was successfully updated.' }
+        format.html { redirect_to [@club, @venue], notice: 'Esercizio aggiornato con successo.' }
         format.json { head :no_content }
       else
         format.html { render action: 'edit' }

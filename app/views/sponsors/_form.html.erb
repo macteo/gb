@@ -12,30 +12,32 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :title %><br>
-    <%= f.text_field :title %>
+    <%= f.label "Titolo" %><br>
+    <%= f.text_field :title, :size => "90" %>
   </div>
   <div class="field">
-    <%= f.label :subtitle %><br>
-    <%= f.text_field :subtitle %>
+    <%= f.label "Sottotitolo" %><br>
+    <%= f.text_field :subtitle, :size => "90" %>
   </div>
   <div class="field">
     <%= f.label :image_id %><br>
     <%= f.text_field :image_id %>
   </div>
   <div class="field">
-    <%= f.label :finish %><br>
-    <%= f.date_select :finish %>
-  </div>
-  <div class="field">
-    <%= f.label :start %><br>
+    <%= f.label "Inizio validità" %><br>
     <%= f.date_select :start %>
   </div>
   <div class="field">
-    <%= f.label :website %><br>
+    <%= f.label "Fine Validità" %><br>
+    <%= f.date_select :finish %>
+  </div>
+  <div class="field">
+    <%= f.label "Sito Web" %><br>
     <%= f.text_field :website %>
   </div>
+  <br/>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Salva Sponsor", :class => "btn btn-primary" %>
   </div>
+  <br />
 <% end %>

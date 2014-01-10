@@ -1,16 +1,15 @@
-<h1>Listing sponsors</h1>
+<h1>Elenco Sponsor</h1>
+
+<p>
+    <%= link_to 'Nuovo Sponsor', new_sponsor_path, :class => "btn btn-primary" %>
+</p>
 
 <table class="table table-bordered table-striped">
   <thead>
     <tr>
-      <th>Title</th>
-      <th>Subtitle</th>
-      <th>Image</th>
-      <th>Finish</th>
-      <th>Start</th>
+      <th>Titolo</th>
+      <th>Sottotitolo</th>
       <th>Website</th>
-      <th></th>
-      <th></th>
       <th></th>
     </tr>
   </thead>
@@ -18,20 +17,12 @@
   <tbody>
     <% @sponsors.each do |sponsor| %>
       <tr>
-        <td><%= sponsor.title %></td>
+        <td><%= link_to sponsor.title, sponsor, :class => "btn btn-info btn-xs" %></td>
         <td><%= sponsor.subtitle %></td>
-        <td><%= sponsor.image_id %></td>
-        <td><%= sponsor.finish %></td>
-        <td><%= sponsor.start %></td>
         <td><%= sponsor.website %></td>
-        <td><%= link_to 'Show', sponsor %></td>
-        <td><%= link_to 'Edit', edit_sponsor_path(sponsor) %></td>
-        <td><%= link_to 'Destroy', sponsor, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Modifica', edit_sponsor_path(sponsor), :class => "btn btn-warning btn-xs" %>
+            <%= link_to 'Distruggi', sponsor, method: :delete, data: { confirm: 'Sei sicuro?' }, :class => "btn btn-danger btn-xs" %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
-
-<br>
-
-<%= link_to 'New Sponsor', new_sponsor_path %>
