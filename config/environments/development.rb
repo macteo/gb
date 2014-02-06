@@ -16,7 +16,7 @@ GolfBoxBackend::Application.configure do
   # Don't care if the mailer can't send.
   config.action_mailer.raise_delivery_errors = false
 
-  config.action_mailer.default_url_options = { :host => "MBPTeo.local:3000" }
+  config.action_mailer.default_url_options = { :host => "api.golfbox.it:3000" }
 
   # Print deprecation notices to the Rails logger.
   config.active_support.deprecation = :log
@@ -30,13 +30,13 @@ GolfBoxBackend::Application.configure do
   config.assets.debug = true
 
   config.action_mailer.smtp_settings = {
-    address: "smtp.gmail.com",
+    address: "smtp.golfbox.it",
     port: 587,
     domain: ENV["DOMAIN_NAME"],
     authentication: "plain",
-    enable_starttls_auto: true,
-    user_name: ENV["GMAIL_USERNAME"],
-    password: ENV["GMAIL_PASSWORD"]
+    enable_starttls_auto: false,
+    user_name: ENV["MAIL_USERNAME"],
+    password: ENV["MAIL_PASSWORD"]
   }
   # Send email in development mode.
   config.action_mailer.perform_deliveries = true
