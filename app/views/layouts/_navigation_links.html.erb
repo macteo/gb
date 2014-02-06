@@ -7,7 +7,9 @@
 
 <% if user_signed_in? %>
   <li class="nav navbar-nav navbar-right"><%= link_to 'Modifica account', edit_user_registration_path %></li>
+  <li class="nav navbar-nav navbar-right"><%= link_to "Esci", destroy_user_session_path, method: :delete %></li>
 <% else %>
+  <li class="nav navbar-nav navbar-right"><%= link_to 'Accedi', new_user_session_path %></li>
   <li class="nav navbar-nav navbar-right"><%= link_to 'Registrati', new_user_registration_path %></li>
 <% end %>
 

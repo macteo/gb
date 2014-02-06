@@ -1,6 +1,7 @@
 class VenuesController < ApplicationController
   before_action :set_venue, only: [:show, :edit, :update, :destroy]
   before_action :set_club
+  load_and_authorize_resource
   # GET /venues
   # GET /venues.json
   def index
