@@ -1,6 +1,6 @@
 class ClubsController < ApplicationController
   before_action :set_club, only: [:show, :edit, :update, :destroy]
-  load_and_authorize_resource
+  load_and_authorize_resource except: [:create]
   # GET /clubs
   # GET /clubs.json
   def index

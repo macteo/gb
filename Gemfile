@@ -14,6 +14,7 @@ gem 'figaro'
 gem 'mysql2'
 gem 'rolify'
 gem 'carrierwave'
+gem "fog"
 gem 'mini_magick'
 gem 'jquery-fileupload-rails' # Asynchronous file upload
 gem 'therubyracer', "~> 0.12.0", require: "v8"

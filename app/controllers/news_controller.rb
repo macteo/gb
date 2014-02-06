@@ -1,7 +1,7 @@
 class NewsController < ApplicationController
   before_action :set_news, only: [:show, :edit, :update, :destroy]
   before_action :set_club
-  load_and_authorize_resource
+  load_and_authorize_resource except: [:create]
   # GET /news
   # GET /news.json
   def index
