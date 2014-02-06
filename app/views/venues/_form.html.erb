@@ -19,7 +19,7 @@
           </div>
           <div class="form-group">
             <%= f.label "Categoria" %><br>
-            <%= f.number_field :category, :class => "form-control" %>
+            <%= f.collection_select :category, CATEGORIES, :first, :last, {:prompt => "Scegli la categoria"}, {:class => "form-control"} %>
           </div>
           <div class="form-group">
             <%= f.label "Telefono" %><br>
