@@ -16,6 +16,7 @@ gem 'rolify'
 gem 'carrierwave'
 gem 'mini_magick'
 gem 'jquery-fileupload-rails' # Asynchronous file upload
+gem 'therubyracer', "~> 0.12.0"
 group :development do
   gem 'better_errors'
   gem 'binding_of_caller', :platforms=>[:mri_19, :mri_20, :rbx]
