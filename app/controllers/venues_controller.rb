@@ -5,7 +5,10 @@ class VenuesController < ApplicationController
   # GET /venues
   # GET /venues.json
   def index
-    @venues = Venue.all
+    respond_to do |format|
+      format.html { @venues = @club.venues }
+      format.json { @venues = Venue.all }
+    end
   end
 
   # GET /venues/1
