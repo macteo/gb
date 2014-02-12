@@ -1,14 +1,10 @@
 GolfBoxBackend::Application.routes.draw do
-
-  resources :images, :defaults => { :format => 'json' }
   resources :sponsors
-  resources :news, :defaults => { :format => 'json' }
-  resources :venues, :defaults => { :format => 'json' }
+  resources :news
+  resources :venues
   resources :clubs do 
     resources :news
-    resources :venues do 
-      resource :image
-    end
+    resources :venues
   end
 
   root :to => "home#index"

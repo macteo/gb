@@ -1,15 +1,31 @@
 class ClubsController < ApplicationController
   before_action :set_club, only: [:show, :edit, :update, :destroy]
-  load_and_authorize_resource except: [:create]
+  authorize_resource except: [:create, :index, :show]
   # GET /clubs
   # GET /clubs.json
   def index
-    @clubs = Club.all
+    @clubs = Club.all 
+    respond_to do |format|
+      format.html { 
+        authorize! :index, @clubs
+      }
+      format.json { 
+    
+      }
+    end
   end
 
   # GET /clubs/1
   # GET /clubs/1.json
   def show
+    respond_to do |format|
+      format.html { 
+        authorize! :index, @club
+      }
+      format.json { 
+    
+      }
+    end
   end
 
   # GET /clubs/new

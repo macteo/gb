@@ -1,12 +1,15 @@
 class NewsController < ApplicationController
   before_action :set_news, only: [:show, :edit, :update, :destroy]
   before_action :set_club
-  load_and_authorize_resource except: [:create]
+  authorize_resource except: [:create, :index, :show]
   # GET /news
   # GET /news.json
   def index
     respond_to do |format|
-      format.html { @news = @club.news }
+      format.html { 
+        @news = @club.news 
+        authorize! :index, @news
+      }
       format.json { @news = News.all }
     end
   end
@@ -14,6 +17,14 @@ class NewsController < ApplicationController
   # GET /news/1
   # GET /news/1.json
   def show
+    respond_to do |format|
+      format.html { 
+        authorize! :index, @news
+      }
+      format.json { 
+    
+      }
+    end
   end
 
   # GET /news/new

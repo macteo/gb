@@ -1,15 +1,29 @@
 class SponsorsController < ApplicationController
   before_action :set_sponsor, only: [:show, :edit, :update, :destroy]
-  load_and_authorize_resource except: [:create]
+  authorize_resource except: [:create, :index, :show]
   # GET /sponsors
   # GET /sponsors.json
   def index
-    @sponsors = Sponsor.all
+    respond_to do |format|
+      format.html { 
+        @sponsors = Sponsor.all
+        authorize! :index, @sponsors
+      }
+      format.json { @sponsors = Sponsor.all }
+    end
   end
 
   # GET /sponsors/1
   # GET /sponsors/1.json
   def show
+    respond_to do |format|
+      format.html { 
+        authorize! :index, @sponsor
+      }
+      format.json { 
+    
+      }
+    end
   end
 
   # GET /sponsors/new
