@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140110195745) do
+ActiveRecord::Schema.define(version: 20140216115326) do
 
   create_table "clubs", force: true do |t|
     t.text     "address"
@@ -143,6 +143,7 @@ ActiveRecord::Schema.define(version: 20140110195745) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "file"
+    t.string   "mobile"
   end
 
 end
