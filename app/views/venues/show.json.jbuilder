@@ -1,1 +1,1 @@
-json.extract! @venue, :id, :address, :category, :closed, :contacts, :desc, :email, :instructions, :latitude, :longitude, :name, :note, :telephone, :website, :club_id, :file_iphone_url, :file_iphone_2x_url, :created_at, :updated_at
+json.extract! @venue, :id, :address, :category, :closed, :contacts, :desc, :email, :instructions, :latitude, :longitude, :name, :note, :telephone, :website, :club_id, :file_iphone_url, :file_iphone_2x_url, :created_at, :updated_at, :mobile
