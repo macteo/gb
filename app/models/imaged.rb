@@ -5,22 +5,14 @@ class Imaged < ActiveRecord::Base
   
   def file_iphone_url
     if self.file
-      if ENV["STORAGE"] == "fog"
-        self.file.iphone.url
-      else 
-        "#{ENV["DOMAIN"]}#{self.file.iphone.url}"
-      end
+      self.file.iphone.url
     else
       nil
     end
   end
   def file_iphone_2x_url
     if self.file
-      if ENV["STORAGE"] == "fog"
-        self.file.iphone_2x.url
-      else 
-        "#{ENV["DOMAIN"]}#{self.file.iphone_2x.url}"
-      end      
+      self.file.iphone.url
     else
       nil
     end
