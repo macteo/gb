@@ -1,2 +1,2 @@
 REGIONS = {1 => "Abruzzo", 2 => "Basilicata", 3 => "Calabria", 4 => "Campania", 5 => "Emilia Romagna", 6 => "Friuli Venezia Giulia", 7 => "Lazio", 8 => "Liguria", 9 => "Lombardia", 10 => "Marche", 11 => "Molise", 12 => "Piemonte", 13 => "Puglia", 14 => "Sardegna", 15 => "Sicilia", 16 => "Toscana", 17 => "Trentino Alto Adige", 18 => "Umbria", 19 => "Val d'Aosta", 20 => "Veneto"}
-CATEGORIES = {1 => "Ristoranti", 2 => "Hotel", 3 => "Benessere", 4 => "Divertimento" }
+CATEGORIES = {1 => "Ristoranti", 2 => "Hotel", 3 => "Benessere", 4 => "Shopping e Altro" }
